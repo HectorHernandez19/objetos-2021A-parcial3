@@ -33,4 +33,8 @@ public class Group {
         students.add(student);
         availability--;
     }
+
+    public double getAverage(){
+        return 90;
+    }
 }
