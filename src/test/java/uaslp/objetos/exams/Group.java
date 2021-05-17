@@ -1,5 +1,6 @@
 package uaslp.objetos.exams;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
@@ -8,6 +9,7 @@ public class Group {
     private int availability;
 
     public Group(int capacity){
+        students = new ArrayList<>(21);
         this.capacity = capacity;
         availability = capacity;
     }
@@ -24,7 +26,11 @@ public class Group {
         return students;
     }
 
-    public void addStudent(List<Student> student) {
-        students.add((Student) student);
+    public void addStudent(Student student) {
+        if(availability == 0){
+            throw new GroupIsFullException();
+        }
+        students.add(student);
+        availability--;
     }
 }
