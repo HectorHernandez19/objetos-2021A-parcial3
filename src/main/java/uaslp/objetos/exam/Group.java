@@ -1,4 +1,4 @@
-package uaslp.objetos.exams;
+package uaslp.objetos.exam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class Group {
     private int availability;
 
     public Group(int capacity){
-        students = new ArrayList<>(21);
+        students = new ArrayList<>(capacity);
         this.capacity = capacity;
         availability = capacity;
     }
@@ -35,6 +35,12 @@ public class Group {
     }
 
     public double getAverage(){
-        return 90;
+        Student student;
+        double average = 0;
+        for(int i = 0; i < students.size(); i++){
+            student = students.get(i);
+            average += student.getAverage();
+        }
+        return (average/students.size());
     }
 }

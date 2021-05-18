@@ -3,6 +3,7 @@ package uaslp.objetos.exams;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import uaslp.objetos.exam.*;
 
 import java.util.List;
 

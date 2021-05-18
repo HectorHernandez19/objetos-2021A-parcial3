@@ -1,4 +1,4 @@
-package uaslp.objetos.exams;
+package uaslp.objetos.exam;
 
 public class GroupIsFullException extends RuntimeException{
 }
